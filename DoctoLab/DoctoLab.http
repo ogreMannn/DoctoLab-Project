@@ -1,0 +1,6 @@
+@DoctoLab_HostAddress = http://localhost:5191
+
+GET {{DoctoLab_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
