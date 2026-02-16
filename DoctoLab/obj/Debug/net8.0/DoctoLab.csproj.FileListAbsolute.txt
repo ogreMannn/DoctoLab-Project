@@ -111,3 +111,4 @@ C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.pdb
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.genruntimeconfig.cache
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\ref\DoctoLab.dll
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.sourcelink.json
