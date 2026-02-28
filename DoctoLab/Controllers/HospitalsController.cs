@@ -98,6 +98,31 @@ namespace DoctoLab.Controllers
             return Ok("Hospital deleted successfully");
         }
 
+        [HttpPut("{id}")]
+
+        public async Task<ActionResult<HospitalGetDto>> Update(int id, HospitalCreateDto updateHospital)
+        {
+            var hospital = await _context.Hospitals.FindAsync(id);
+            if(hospital == null)
+            {
+                return NotFound();
+            }
+
+            hospital.Name = updateHospital.Name;
+            hospital.Address = updateHospital.Address;
+            await _context.SaveChangesAsync();
+
+            var result = new HospitalGetDto
+            {
+                Id = hospital.Id,
+                Name = hospital.Name,
+                Address = hospital.Address
+
+            };
+
+            return Ok(result);
+            
+        }
         
 
         

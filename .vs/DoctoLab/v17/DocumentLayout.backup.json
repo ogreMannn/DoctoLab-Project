@@ -70,8 +70,7 @@
               "RelativeToolTip": "DoctoLab\\Models\\Patient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:32:55.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:32:55.2Z"
             },
             {
               "$type": "Document",
@@ -187,9 +186,9 @@
               "Title": "HospitalsController.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\HospitalsController.cs",
-              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs*",
-              "RelativeToolTip": "DoctoLab\\Controllers\\HospitalsController.cs*",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAcwGAAAAAuAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs",
+              "RelativeToolTip": "DoctoLab\\Controllers\\HospitalsController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAiwHoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T10:01:21.683Z",
               "EditorCaption": ""
