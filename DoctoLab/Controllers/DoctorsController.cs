@@ -113,7 +113,7 @@ namespace DoctoLab.Controllers
                 new { id = doctor.Id }, result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<DoctorGetDto>> Delete(int id)
         {
             var doctor = await _context.Doctors.FindAsync(id);
@@ -127,6 +127,8 @@ namespace DoctoLab.Controllers
             return Ok("U deleted doctor successfully");
 
         }
+
+
         
 
     }
