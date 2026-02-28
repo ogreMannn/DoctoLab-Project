@@ -3,6 +3,7 @@ using DoctoLab.DTOs;
 using DoctoLab.GTOs;
 using DoctoLab.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -44,8 +45,70 @@ namespace DoctoLab.Controllers
             return Ok(doctors);
         }
 
-       
+        [HttpGet("{id}")]
 
+        public async Task<ActionResult<DoctorGetDto>> GetById(int id)
+        {
+            var doctor = await _context.Doctors
+                .Where(x => x.Id == id)
+                .Select(x => new DoctorGetDto()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Surname = x.Surname,
+                    Age = x.Age,
+                    Description = x.Description,
+                    FilePath = x.FilePath,
+                    FieldId = x.FieldId,
+                    FieldName = x.field.Name,
+                    HospitalId = x.HospitalId,
+                    HospitalName = x.hospital.Name
+
+
+                })
+                .FirstOrDefaultAsync();
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+            return Ok(doctor);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<DoctorCreateDto>> Create(DoctorCreateDto dto)
+        {
+            var doctor = new Doctor
+            {
+                Name = dto.Name,
+                Surname = dto.Surname,
+                Age = dto.Age,
+                Description = dto.Description,
+                FilePath = dto.FilePath,
+                FieldId = dto.FieldId,
+                HospitalId = dto.HospitalId,
+            };
+
+            await _context.Doctors.AddAsync(doctor);
+            await _context.SaveChangesAsync();
+
+            var result = new DoctorGetDto
+            {
+                Id = doctor.Id,
+                Name = doctor.Name,
+                Surname = doctor.Surname,
+                Age = doctor.Age,
+                Description = doctor.Description,
+                FilePath = doctor.FilePath,
+                FieldId = doctor.FieldId,
+                HospitalId = doctor.HospitalId,
+
+            };
+
+            return CreatedAtAction(nameof(GetById),
+                new { id = doctor.Id }, result);
+        }
+
+        
 
     }
 }
