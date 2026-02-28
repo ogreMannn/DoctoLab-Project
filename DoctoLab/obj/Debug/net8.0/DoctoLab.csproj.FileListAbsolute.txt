@@ -96,6 +96,7 @@ C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.Assembly
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.csproj.CoreCompileInputs.cache
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.sourcelink.json
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -104,11 +105,10 @@ C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.b
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.csproj.Up2Date
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.dll
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\refint\DoctoLab.dll
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.pdb
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.genruntimeconfig.cache
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\ref\DoctoLab.dll
-C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\mursa\source\repos\DoctoLab\DoctoLab\obj\Debug\net8.0\DoctoLab.sourcelink.json

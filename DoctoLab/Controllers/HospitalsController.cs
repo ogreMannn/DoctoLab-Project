@@ -1,6 +1,6 @@
 ﻿using DoctoLab.Contexts;
+using DoctoLab.GTOs;
 using DoctoLab.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,38 +8,73 @@ namespace DoctoLab.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HospitalsController(ApplicationDbContext _context) : ControllerBase
+    public class HospitalsController : ControllerBase
     {
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        private readonly ApplicationDbContext _context;
+
+        public HospitalsController(ApplicationDbContext context)
         {
-            var hospitals= await _context.Hospitals.ToListAsync();
+            _context = context;
+        }
+
+        
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<HospitalGetDto>>> GetAll()
+        {
+            var hospitals = await _context.Hospitals
+                .Select(x => new HospitalGetDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Address = x.Address
+                })
+                .ToListAsync();
+
             return Ok(hospitals);
         }
 
+        // GET: api/hospitals/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public async Task<ActionResult<HospitalGetDto>> GetById(int id)
         {
-            
-            var hospital = await _context.Hospitals.FirstOrDefaultAsync(x => x.Id == id);
-            
-            if(hospital == null)
-            {
+            var hospital = await _context.Hospitals
+                .Where(x => x.Id == id)
+                .Select(x => new HospitalGetDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Address = x.Address
+                })
+                .FirstOrDefaultAsync();
+
+            if (hospital == null)
                 return NotFound();
-            }
 
             return Ok(hospital);
-
         }
 
+        
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Hospital hospital)
+        public async Task<ActionResult<HospitalGetDto>> Create(HospitalCreateDto dto)
         {
+            var hospital = new Hospital
+            {
+                Name = dto.Name,
+                Address = dto.Address
+            };
+
             await _context.Hospitals.AddAsync(hospital);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetById),new { id = hospital.Id },hospital);
+
+            var result = new HospitalGetDto
+            {
+                Id = hospital.Id,
+                Name = hospital.Name,
+                Address = hospital.Address
+            };
+
+            return CreatedAtAction(nameof(GetById),
+                new { id = hospital.Id }, result);
         }
-
-
     }
 }
