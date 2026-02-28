@@ -70,5 +70,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "DoctoLab.Controllers.HospitalsController",
+    "Method": "Delete",
+    "RelativePath": "api/Hospitals/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DoctoLab.GTOs.HospitalGetDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

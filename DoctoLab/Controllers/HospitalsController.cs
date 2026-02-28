@@ -1,6 +1,7 @@
 ﻿using DoctoLab.Contexts;
 using DoctoLab.GTOs;
 using DoctoLab.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -76,5 +77,29 @@ namespace DoctoLab.Controllers
             return CreatedAtAction(nameof(GetById),
                 new { id = hospital.Id }, result);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<HospitalGetDto>> Delete(int id)
+        {
+            var hospital = await _context.Hospitals.FindAsync(id);
+            if(hospital == null)
+            {
+                return NotFound();
+            }
+
+            var hasDoctors = await _context.Doctors.AnyAsync(x => x.HospitalId == id);
+            if (hasDoctors)
+            {
+                return BadRequest("U can not delete hospitals with doctors");
+            }
+
+            _context.Hospitals.Remove(hospital);
+            await _context.SaveChangesAsync();
+            return Ok("Hospital deleted successfully");
+        }
+
+        
+
+        
     }
 }

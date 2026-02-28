@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\controllers\\hospitalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\controllers\\hospitalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\controllers\\hospitalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\controllers\\hospitalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Patient.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\Patient.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\Patient.cs",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Hospital.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\Hospital.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\Hospital.cs",
@@ -83,12 +83,11 @@
               "RelativeToolTip": "DoctoLab\\Models\\Hospital.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:32:46.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:32:46.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Field.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\Field.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\Field.cs",
@@ -96,12 +95,11 @@
               "RelativeToolTip": "DoctoLab\\Models\\Field.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:31:09.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:31:09.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\Doctor.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\Doctor.cs",
@@ -109,12 +107,11 @@
               "RelativeToolTip": "DoctoLab\\Models\\Doctor.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:30:06.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:30:06.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppointmentStatus.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\AppointmentStatus.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\AppointmentStatus.cs",
@@ -122,12 +119,11 @@
               "RelativeToolTip": "DoctoLab\\Models\\AppointmentStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:28:05.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:28:05.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Models\\Appointment.cs",
@@ -135,8 +131,7 @@
               "RelativeToolTip": "DoctoLab\\Models\\Appointment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:27:51.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T08:27:51.905Z"
             },
             {
               "$type": "Document",
@@ -172,8 +167,7 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\AppointmentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T12:05:03.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-14T12:05:03.177Z"
             },
             {
               "$type": "Document",
@@ -189,13 +183,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "HospitalsController.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\HospitalsController.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs",
               "RelativeToolTip": "DoctoLab\\Controllers\\HospitalsController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAiwGQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T10:01:21.683Z",
               "EditorCaption": ""
@@ -210,8 +204,7 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\DoctorsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T10:01:07.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-14T10:01:07.093Z"
             }
           ]
         }
