@@ -88,6 +88,11 @@ namespace DoctoLab.Controllers
                 HospitalId = dto.HospitalId,
             };
 
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
             await _context.Doctors.AddAsync(doctor);
             await _context.SaveChangesAsync();
 
@@ -108,6 +113,20 @@ namespace DoctoLab.Controllers
                 new { id = doctor.Id }, result);
         }
 
+        [HttpDelete]
+        public async Task<ActionResult<DoctorGetDto>> Delete(int id)
+        {
+            var doctor = await _context.Doctors.FindAsync(id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
+            _context.Doctors.Remove(doctor);
+            await _context.SaveChangesAsync();
+            return Ok("U deleted doctor successfully");
+
+        }
         
 
     }
