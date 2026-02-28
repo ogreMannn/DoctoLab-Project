@@ -34,7 +34,7 @@ namespace DoctoLab.Controllers
             return Ok(hospitals);
         }
 
-        // GET: api/hospitals/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<HospitalGetDto>> GetById(int id)
         {
