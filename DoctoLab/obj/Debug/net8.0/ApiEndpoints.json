@@ -1,5 +1,103 @@
 [
   {
+    "ContainingType": "DoctoLab.Controllers.AppointmentsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DoctoLab.DTOs.AppointmentGetDto, DoctoLab, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DoctoLab.Controllers.AppointmentsController",
+    "Method": "Create",
+    "RelativePath": "api/Appointments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DoctoLab.DTOs.AppointmentCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DoctoLab.DTOs.AppointmentCreateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DoctoLab.Controllers.AppointmentsController",
+    "Method": "GetById",
+    "RelativePath": "api/Appointments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DoctoLab.DTOs.AppointmentGetDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DoctoLab.Controllers.AppointmentsController",
+    "Method": "Delete",
+    "RelativePath": "api/Appointments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DoctoLab.DTOs.AppointmentGetDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "DoctoLab.Controllers.DoctorsController",
     "Method": "GetAll",
     "RelativePath": "api/Doctors",
@@ -129,9 +227,9 @@
     ]
   },
   {
-    "ContainingType": "DoctoLab.Controllers.FieldController",
+    "ContainingType": "DoctoLab.Controllers.FieldsController",
     "Method": "GetAll",
-    "RelativePath": "api/Field",
+    "RelativePath": "api/Fields",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -149,9 +247,9 @@
     ]
   },
   {
-    "ContainingType": "DoctoLab.Controllers.FieldController",
+    "ContainingType": "DoctoLab.Controllers.FieldsController",
     "Method": "Create",
-    "RelativePath": "api/Field",
+    "RelativePath": "api/Fields",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
