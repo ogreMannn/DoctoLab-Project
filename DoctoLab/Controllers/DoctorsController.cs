@@ -88,10 +88,6 @@ namespace DoctoLab.Controllers
                 HospitalId = dto.HospitalId,
             };
 
-            if (doctor == null)
-            {
-                return NotFound();
-            }
 
             await _context.Doctors.AddAsync(doctor);
             await _context.SaveChangesAsync();
@@ -125,6 +121,42 @@ namespace DoctoLab.Controllers
             _context.Doctors.Remove(doctor);
             await _context.SaveChangesAsync();
             return Ok("U deleted doctor successfully");
+
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<DoctorGetDto>> Update(int id , DoctorCreateDto updateDoctor)
+        {
+            var doctor = await _context.Doctors.FindAsync(id);
+            if (doctor == null)
+            {
+                return NoContent();
+            }
+
+            doctor.Name = updateDoctor.Name;
+            doctor.Surname = updateDoctor.Surname;
+            doctor.Age = updateDoctor.Age;
+            doctor.Description = updateDoctor.Description;
+            doctor.FilePath = updateDoctor.FilePath;
+            doctor.FieldId = updateDoctor.FieldId;
+            doctor.HospitalId = updateDoctor.HospitalId;
+
+            await _context.SaveChangesAsync();
+
+            var result = new DoctorGetDto
+            {
+                Id = doctor.Id,
+                Name = doctor.Name,
+                Surname = doctor.Surname,
+                Age = doctor.Age,
+                Description = doctor.Description,
+                FilePath = doctor.FilePath,
+                FieldId = doctor.FieldId,
+                HospitalId = doctor.HospitalId
+            };
+
+            return Ok(result);
 
         }
 

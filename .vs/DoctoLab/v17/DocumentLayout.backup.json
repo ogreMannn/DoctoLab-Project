@@ -34,8 +34,7 @@
               "RelativeToolTip": "DoctoLab\\DTOs\\DoctorGetDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T10:50:48.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T10:50:48.678Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\HospitalsController.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\HospitalsController.cs",
               "RelativeToolTip": "DoctoLab\\Controllers\\HospitalsController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwE0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T10:01:21.683Z",
               "EditorCaption": ""
@@ -58,7 +57,7 @@
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\DoctorsController.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\DoctorsController.cs",
               "RelativeToolTip": "DoctoLab\\Controllers\\DoctorsController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAcwIAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-14T10:01:07.093Z",
               "EditorCaption": ""
