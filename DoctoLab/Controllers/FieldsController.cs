@@ -9,11 +9,11 @@ namespace DoctoLab.Controllers
     [ApiController]
     [Route("api/[controller]")]
     
-    public class FieldController : ControllerBase
+    public class FieldsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public FieldController(ApplicationDbContext context)
+        public FieldsController(ApplicationDbContext context)
         {
             _context = context;
         }
