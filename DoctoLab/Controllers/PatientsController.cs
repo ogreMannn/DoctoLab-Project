@@ -6,8 +6,15 @@ namespace DoctoLab.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PatientsController(ApplicationDbContext _context) : ControllerBase
+    public class PatientsController : ControllerBase
     {
+        private readonly ApplicationDbContext _context;
+
+        public PatientsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
 
     }
 }
