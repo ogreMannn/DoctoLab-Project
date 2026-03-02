@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "DoctoLab\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "DoctoLab\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T21:09:43.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AppUserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Configurations\\AppUserConfiguration.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Configurations\\AppUserConfiguration.cs",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "DoctoLab\\Configurations\\AppUserConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T21:00:29.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T21:00:29.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\DTOs\\RegisterDto.cs",
               "RelativeDocumentMoniker": "DoctoLab\\DTOs\\RegisterDto.cs",
@@ -64,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\AuthController.cs",
@@ -72,12 +88,11 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAiwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T13:19:24.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T13:19:24.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FieldsController.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Controllers\\FieldsController.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Controllers\\FieldsController.cs",
@@ -85,12 +100,11 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\FieldsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T13:16:36.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T13:16:36.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\appsettings.json",
               "RelativeDocumentMoniker": "DoctoLab\\appsettings.json",
@@ -98,12 +112,11 @@
               "RelativeToolTip": "DoctoLab\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-02T10:45:58.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T10:45:58.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Program.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Program.cs",
@@ -111,8 +124,7 @@
               "RelativeToolTip": "DoctoLab\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T09:19:43.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T09:19:43.201Z"
             }
           ]
         }
