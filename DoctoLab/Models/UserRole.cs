@@ -1,6 +1,6 @@
 ﻿namespace DoctoLab.Models
 {
-    public enum Role
+    public enum UserRole
     {
         Patient,
         Doctor,
