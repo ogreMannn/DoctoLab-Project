@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "DoctoLab\\Program.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Program.cs",
               "RelativeToolTip": "DoctoLab\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-02T09:19:43.201Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "DoctoLab\\Configurations\\HospitalConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T08:55:58.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T08:55:58.643Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\PatientsController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T20:45:01.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T20:45:01.879Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\DoctorsController.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAkwGIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:45:51.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T19:45:51.066Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "DoctoLab\\Models\\Appointment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T14:41:44.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T14:41:44.731Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "DoctoLab\\DTOs\\AppointmentCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T14:39:14.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T14:39:14.243Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "DoctoLab\\DTOs\\AppointmentGetDto.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T14:38:35.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T14:38:35.381Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "DoctoLab\\Models\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T08:44:40.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T08:44:40.76Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\AppointmentsController.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAawF0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T13:35:15.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T13:35:15.724Z"
             }
           ]
         }
