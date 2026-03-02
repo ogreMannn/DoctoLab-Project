@@ -13,11 +13,13 @@ namespace DoctoLab.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly ApplicationDbContext _context;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public AuthController(UserManager<AppUser> userManager, ApplicationDbContext context)
+        public AuthController(UserManager<AppUser> userManager, ApplicationDbContext context, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _context = context;
+            _signInManager = signInManager;
         }
 
         [HttpPost("register")]
@@ -54,6 +56,26 @@ namespace DoctoLab.Controllers
             }
 
             return Ok("Registered successfully");
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDto dto)
+        {
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+            if (user == null)
+                return Unauthorized("Invalid email or password");
+
+            var result = await _signInManager.CheckPasswordSignInAsync(
+
+                user,
+                dto.Password,
+                false
+             );
+
+            if (!result.Succeeded)
+                return Unauthorized("Invalid Email or password");
+
+            return Ok("Login successful");
 
 
         }
