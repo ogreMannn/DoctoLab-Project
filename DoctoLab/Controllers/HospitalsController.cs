@@ -1,12 +1,14 @@
 ﻿using DoctoLab.Contexts;
 using DoctoLab.GTOs;
 using DoctoLab.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctoLab.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HospitalsController : ControllerBase
