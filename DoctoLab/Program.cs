@@ -92,26 +92,11 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(key),
-          ClockSkew = TimeSpan.Zero
+         
 
     };
 
-    options.IncludeErrorDetails = true;
-
-    options.Events = new JwtBearerEvents
-    {
-        OnAuthenticationFailed = ctx =>
-        {
-            Console.WriteLine("AUTH FAILED: " + ctx.Exception.GetType().Name);
-            Console.WriteLine(ctx.Exception.Message);
-            return Task.CompletedTask;
-        },
-        OnTokenValidated = ctx =>
-        {
-            Console.WriteLine("TOKEN VALIDATED");
-            return Task.CompletedTask;
-        }
-    };
+    
 
 });
 

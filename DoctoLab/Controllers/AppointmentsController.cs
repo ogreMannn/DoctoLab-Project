@@ -29,7 +29,7 @@ namespace DoctoLab.Controllers
                     DoctorId = x.DoctorId,
                     DoctorName = x.Doctor.Name,
                     PatientId = x.PatientId,
-                    PatientName = x.Patient.Name
+                    PatientName = x.Patient !=null ? x.Patient.Name : null
 
                 }).ToListAsync();
 
@@ -46,9 +46,9 @@ namespace DoctoLab.Controllers
                     Id = x.Id,
                     AppointmentData = x.AppointmentDate,
                     PatientId = x.PatientId,
-                    PatientName = x.Patient.Name,
+                    PatientName = x.Patient !=null ? x.Patient.Name : null,
                     DoctorId = x.DoctorId,
-                    DoctorName = x.Doctor.Name
+                    DoctorName = x.Doctor !=null ? x.Doctor.Name : null
 
                 }).FirstOrDefaultAsync();
 
@@ -58,6 +58,21 @@ namespace DoctoLab.Controllers
             }
 
             return Ok(appointment);
+        }
+
+        [HttpGet("doctor/{doctorId}")]
+        public async Task<IActionResult> GetDoctorAppointments(int doctorId)
+        {
+            var appointments = await _context.Appointments.Where(x => x.DoctorId == doctorId).Select(x => new
+            {
+
+                x.Id,
+                x.AppointmentDate,
+                x.Status
+
+            }).ToListAsync();
+
+            return Ok(appointments);
         }
 
 
