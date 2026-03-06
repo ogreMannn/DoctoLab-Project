@@ -4,6 +4,12 @@ using DoctoLab.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DoctoLab.Controllers
 {
@@ -13,13 +19,14 @@ namespace DoctoLab.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly ApplicationDbContext _context;
-        private readonly SignInManager<AppUser> _signInManager;
+      
+        private readonly IConfiguration _config;
 
-        public AuthController(UserManager<AppUser> userManager, ApplicationDbContext context, SignInManager<AppUser> signInManager)
+        public AuthController(UserManager<AppUser> userManager, ApplicationDbContext context,IConfiguration config)
         {
             _userManager = userManager;
             _context = context;
-            _signInManager = signInManager;
+            _config = config;
         }
 
         [HttpPost("register")]
@@ -65,22 +72,59 @@ namespace DoctoLab.Controllers
             if (user == null)
                 return Unauthorized("Invalid email or password");
 
-            var result = await _signInManager.CheckPasswordSignInAsync(
+            var isValid = await _userManager.CheckPasswordAsync(
 
                 user,
-                dto.Password,
-                false
+                dto.Password
+                
              );
 
-            if (!result.Succeeded)
+            if (!isValid)
                 return Unauthorized("Invalid Email or password");
 
-            return Ok("Login successful");
+            var token = GenerateToken(user);
+
+            return Ok(new
+            {
+                token = token,
+                role = user.Role
+
+            });
 
 
         }
 
-       
-        
+        private string GenerateToken(AppUser user)
+        {
+            var jwt = _config.GetSection("Jwt");
+
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier,user.Id),
+                new Claim(ClaimTypes.Email,user.Email),
+                new Claim(ClaimTypes.Role, user.Role)
+            };
+
+            var key = new SymmetricSecurityKey(
+
+                Encoding.UTF8.GetBytes(jwt["Key"]));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+
+                issuer: jwt["Issuer"],
+                audience: jwt["Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddDays(
+
+                    double.Parse(jwt["ExpireDays"])),
+
+                signingCredentials:creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+            
+        }
     }
 }
