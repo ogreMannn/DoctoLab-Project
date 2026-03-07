@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\validators\\hospitalvalidators\\hospitalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\validators\\hospitalvalidators\\hospitalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\validators\\appointmentvalidators\\appointmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\validators\\appointmentvalidators\\appointmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\validators\\registervalidators\\registervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\validators\\registervalidators\\registervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\validators\\doctorvalidators\\doctorvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\validators\\doctorvalidators\\doctorvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\validators\\appointmentvalidators\\appointmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\validators\\appointmentvalidators\\appointmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "HospitalValidator.cs",
+              "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Validators\\HospitalValidators\\HospitalValidator.cs",
+              "RelativeDocumentMoniker": "DoctoLab\\Validators\\HospitalValidators\\HospitalValidator.cs",
+              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Validators\\HospitalValidators\\HospitalValidator.cs",
+              "RelativeToolTip": "DoctoLab\\Validators\\HospitalValidators\\HospitalValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T11:22:53.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AppointmentValidator.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Validators\\AppointmentValidators\\AppointmentValidator.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Validators\\AppointmentValidators\\AppointmentValidator.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DoctorValidator.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Validators\\DoctorValidators\\DoctorValidator.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Validators\\DoctorValidators\\DoctorValidator.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "DoctoLab\\Validators\\DoctorValidators\\DoctorValidator.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T11:09:59.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T11:09:59.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RegisterValidator.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Validators\\RegisterValidators\\RegisterValidator.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Validators\\RegisterValidators\\RegisterValidator.cs",
@@ -69,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Program.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Program.cs",
