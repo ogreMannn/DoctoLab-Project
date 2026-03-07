@@ -1,12 +1,14 @@
 ﻿using DoctoLab.Contexts;
 using DoctoLab.DTOs;
 using DoctoLab.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctoLab.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PatientsController : ControllerBase
@@ -61,6 +63,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<PatientCreateDto>> Create(PatientCreateDto dto)
         {
             var patient = new Patient
@@ -90,6 +93,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<PatientGetDto>> Delete(int id)
         {
             var patient = await _context.Patients.FindAsync(id);
@@ -100,33 +104,34 @@ namespace DoctoLab.Controllers
 
             _context.Patients.Remove(patient);
             await _context.SaveChangesAsync();
-            return Ok("U deleted doctor successfully");
+            return Ok("Patient deleted successfully");
 
         }
 
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<PatientGetDto>> Update(int id, PatientCreateDto updatePatient)
         {
-            var doctor = await _context.Patients.FindAsync(id);
-            if (doctor == null)
+            var patient = await _context.Patients.FindAsync(id);
+            if (patient == null)
             {
-                return NoContent();
+                return NotFound();
             }
 
-            doctor.Name = updatePatient.Name;
-            doctor.Surname = updatePatient.Surname;
-            doctor.Age = updatePatient.Age;
+            patient.Name = updatePatient.Name;
+            patient.Surname = updatePatient.Surname;
+            patient.Age = updatePatient.Age;
             
 
             await _context.SaveChangesAsync();
 
             var result = new PatientGetDto
             {
-                Id = doctor.Id,
-                Name = doctor.Name,
-                Surname = doctor.Surname,
-                Age = doctor.Age,
+                Id = patient.Id,
+                Name = patient.Name,
+                Surname = patient.Surname,
+                Age = patient.Age,
               
           
             };

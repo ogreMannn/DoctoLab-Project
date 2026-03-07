@@ -2,6 +2,7 @@
 using DoctoLab.DTOs;
 using DoctoLab.GTOs;
 using DoctoLab.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DoctoLab.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DoctorsController : ControllerBase
@@ -21,7 +23,9 @@ namespace DoctoLab.Controllers
             _context = context;
         }
 
+
         [HttpGet]
+        
         public async Task<ActionResult<IEnumerable<DoctorGetDto>>> GetAll()
         {
             var doctors = await _context.Doctors
@@ -35,9 +39,9 @@ namespace DoctoLab.Controllers
                     Description = x.Description,
                     FilePath = x.FilePath,
                     FieldId = x.FieldId,
-                    FieldName = x.field.Name,
+                    FieldName = x.field !=null ? x.field.Name : null,
                     HospitalId = x.HospitalId,
-                    HospitalName = x.hospital.Name
+                    HospitalName = x.hospital !=null ? x.hospital.Name : null
 
 
                 }).ToListAsync();
@@ -60,9 +64,9 @@ namespace DoctoLab.Controllers
                     Description = x.Description,
                     FilePath = x.FilePath,
                     FieldId = x.FieldId,
-                    FieldName = x.field.Name,
+                    FieldName = x.field != null ? x.field.Name : null,
                     HospitalId = x.HospitalId,
-                    HospitalName = x.hospital.Name
+                    HospitalName = x.hospital != null ? x.hospital.Name : null
 
 
                 })
@@ -75,6 +79,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<DoctorCreateDto>> Create(DoctorCreateDto dto)
         {
             var doctor = new Doctor
@@ -110,6 +115,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<DoctorGetDto>> Delete(int id)
         {
             var doctor = await _context.Doctors.FindAsync(id);
@@ -120,18 +126,19 @@ namespace DoctoLab.Controllers
 
             _context.Doctors.Remove(doctor);
             await _context.SaveChangesAsync();
-            return Ok("U deleted doctor successfully");
+            return Ok("Doctor deleted successfully");
 
         }
 
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<DoctorGetDto>> Update(int id , DoctorCreateDto updateDoctor)
         {
             var doctor = await _context.Doctors.FindAsync(id);
             if (doctor == null)
             {
-                return NoContent();
+                return NotFound();
             }
 
             doctor.Name = updateDoctor.Name;

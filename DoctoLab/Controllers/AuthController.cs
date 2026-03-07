@@ -62,7 +62,11 @@ namespace DoctoLab.Controllers
                 return BadRequest(result.Errors);
             }
 
-            return Ok("Registered successfully");
+            return Ok(new
+            {
+                message = "Registered successfully"
+
+            });
         }
 
         [HttpPost("login")]
@@ -116,7 +120,7 @@ namespace DoctoLab.Controllers
                 issuer: jwt["Issuer"],
                 audience: jwt["Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddDays(
+                expires: DateTime.UtcNow.AddDays(
 
                     double.Parse(jwt["ExpireDays"])),
 

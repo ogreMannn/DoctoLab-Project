@@ -21,7 +21,9 @@ namespace DoctoLab.Controllers
         }
 
         
+
         [HttpGet]
+        
         public async Task<ActionResult<IEnumerable<HospitalGetDto>>> GetAll()
         {
             var hospitals = await _context.Hospitals
@@ -38,6 +40,7 @@ namespace DoctoLab.Controllers
 
         
         [HttpGet("{id}")]
+        
         public async Task<ActionResult<HospitalGetDto>> GetById(int id)
         {
             var hospital = await _context.Hospitals
@@ -58,6 +61,7 @@ namespace DoctoLab.Controllers
 
         
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<HospitalGetDto>> Create(HospitalCreateDto dto)
         {
             var hospital = new Hospital
@@ -80,6 +84,7 @@ namespace DoctoLab.Controllers
                 new { id = hospital.Id }, result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<HospitalGetDto>> Delete(int id)
         {
@@ -100,8 +105,8 @@ namespace DoctoLab.Controllers
             return Ok("Hospital deleted successfully");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-
         public async Task<ActionResult<HospitalGetDto>> Update(int id, HospitalCreateDto updateHospital)
         {
             var hospital = await _context.Hospitals.FindAsync(id);
