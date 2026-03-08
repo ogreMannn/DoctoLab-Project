@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\configurations\\fieldconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\configurations\\fieldconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|solutionrelative:doctolab\\dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3260C42D-8AD4-4A64-8BF0-BBC0C0D01F81}|DoctoLab\\DoctoLab.csproj|c:\\users\\mursa\\source\\repos\\doctolab\\doctolab\\configurations\\patientconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,14 +63,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FieldConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Configurations\\FieldConfiguration.cs",
-              "RelativeDocumentMoniker": "DoctoLab\\Configurations\\FieldConfiguration.cs",
-              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Configurations\\FieldConfiguration.cs",
-              "RelativeToolTip": "DoctoLab\\Configurations\\FieldConfiguration.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCUAAAABAAAAAAAAAA==",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "DoctoLab\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "DoctoLab\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T12:09:22.009Z",
+              "WhenOpened": "2026-03-08T12:16:57.685Z",
               "EditorCaption": ""
             },
             {
@@ -83,7 +83,8 @@
               "RelativeToolTip": "DoctoLab\\Configurations\\PatientConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T12:01:02.917Z"
+              "WhenOpened": "2026-03-08T12:01:02.917Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,9 +94,10 @@
               "RelativeDocumentMoniker": "DoctoLab\\Configurations\\HospitalConfiguration.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Configurations\\HospitalConfiguration.cs",
               "RelativeToolTip": "DoctoLab\\Configurations\\HospitalConfiguration.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBJwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T12:00:46.672Z"
+              "WhenOpened": "2026-03-08T12:00:46.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -107,7 +109,8 @@
               "RelativeToolTip": "DoctoLab\\Configurations\\AppUserConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T12:00:15.84Z"
+              "WhenOpened": "2026-03-08T12:00:15.84Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -119,17 +122,18 @@
               "RelativeToolTip": "DoctoLab\\Configurations\\DoctorConfiguration.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAADwvyUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T11:58:16.286Z"
+              "WhenOpened": "2026-03-08T11:58:16.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\DAL\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DoctoLab\\DAL\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\DAL\\ApplicationDbContext.cs",
               "RelativeToolTip": "DoctoLab\\DAL\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA+wBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-07T19:11:57.435Z",
               "EditorCaption": ""
@@ -144,7 +148,8 @@
               "RelativeToolTip": "DoctoLab\\Controllers\\AppointmentsController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAgwF0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T19:01:56.229Z"
+              "WhenOpened": "2026-03-07T19:01:56.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -156,7 +161,8 @@
               "RelativeToolTip": "DoctoLab\\Validators\\HospitalValidators\\HospitalValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T11:22:53.709Z"
+              "WhenOpened": "2026-03-07T11:22:53.709Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -168,7 +174,8 @@
               "RelativeToolTip": "DoctoLab\\Validators\\AppointmentValidators\\AppointmentValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T11:15:42.918Z"
+              "WhenOpened": "2026-03-07T11:15:42.918Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -180,7 +187,8 @@
               "RelativeToolTip": "DoctoLab\\Validators\\DoctorValidators\\DoctorValidator.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T11:09:59.937Z"
+              "WhenOpened": "2026-03-07T11:09:59.937Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -192,19 +200,21 @@
               "RelativeToolTip": "DoctoLab\\Validators\\RegisterValidators\\RegisterValidator.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T10:59:14.082Z"
+              "WhenOpened": "2026-03-07T10:59:14.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Program.cs",
               "RelativeDocumentMoniker": "DoctoLab\\Program.cs",
               "ToolTip": "C:\\Users\\mursa\\source\\repos\\DoctoLab\\DoctoLab\\Program.cs",
               "RelativeToolTip": "DoctoLab\\Program.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAAHYAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T10:50:12.903Z"
+              "WhenOpened": "2026-03-07T10:50:12.903Z",
+              "EditorCaption": ""
             }
           ]
         }
