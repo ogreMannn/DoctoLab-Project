@@ -10,6 +10,24 @@ namespace DoctoLab.Configurations
         {
             builder.Property(x => x.Name).IsRequired().HasMaxLength(256);
             builder.Property(x => x.Address).IsRequired().HasMaxLength(256);
+
+            builder.HasData(
+
+                new Hospital
+                {
+                    Id = 1,
+                    Name = "Semashka",
+                    Address = "Samed Vurgun kucesi"
+                },
+
+                new Hospital
+                {
+                    Id = 2,
+                    Name = "Respublikansiy bolnica",
+                    Address = "Baku"
+                }
+
+            );
         }
     }
 }

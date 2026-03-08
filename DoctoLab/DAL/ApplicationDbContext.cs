@@ -9,28 +9,23 @@ namespace DoctoLab.Contexts
     {
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
-
-
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Hospital> Hospitals { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Field> Fields { get; set; }
 
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
 
-            modelBuilder
-                .Entity<Appointment>()
+            modelBuilder.Entity<Appointment>()
                 .Property(a => a.Status)
                 .HasConversion<string>();
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            base.OnModelCreating(modelBuilder);
+
+        
         }
-
-
     }
 }

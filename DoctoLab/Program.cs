@@ -1,4 +1,5 @@
 using DoctoLab.Contexts;
+using DoctoLab.Data;
 using DoctoLab.Models;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -115,7 +116,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
 
+    await DbInitializer.SeedAsync(roleManager, userManager);
+}
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

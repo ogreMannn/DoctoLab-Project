@@ -86,7 +86,7 @@ namespace DoctoLab.Controllers
         [HttpPost]
         public async Task<ActionResult<AppointmentCreateDto>> Create(AppointmentCreateDto dto)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (User.IsInRole("Doctor"))
             {
                 var user = await _userManager.FindByIdAsync(userId);
