@@ -28,9 +28,11 @@ namespace DoctoLab.Controllers
 
         [HttpGet]
         
-        public async Task<ActionResult<IEnumerable<DoctorGetDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<DoctorGetDto>>> GetAll(int page= 1, int pageSize = 5)
         {
             var doctors = await _context.Doctors
+               .Skip((page- 1) * pageSize )
+               .Take(pageSize)
                .Include(x => x.field)
                .Include(x => x.hospital)
                .ToListAsync();

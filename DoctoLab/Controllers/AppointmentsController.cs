@@ -26,9 +26,11 @@ namespace DoctoLab.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AppointmentGetDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<AppointmentGetDto>>> GetAll(int page = 1 ,int pageSize = 5 )
         {
             var appointments = await _context.Appointments
+                .Skip((page - 1)* pageSize)
+                .Take(pageSize)
                 .Select(x => new AppointmentGetDto
                 {
                     Id = x.Id,
