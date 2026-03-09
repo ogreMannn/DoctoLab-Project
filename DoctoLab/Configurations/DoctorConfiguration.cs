@@ -15,27 +15,29 @@ namespace DoctoLab.Configurations
 
             builder.HasData(
 
-               new Doctor
-               {
-                   Id = 1,
-                   Name = "Ali",
-                   Surname = "Aliyev",
-                   Description = "Cardiologist with 10 years experience",
-                   FilePath = "doctor1.jpg",
-                   FieldId = 1,
-                   HospitalId = 1
-               },
+                new Doctor
+                {
+                    Id = 1,
+                    Name = "Ali",
+                    Surname = "Aliyev",
+                    Description = "Cardiologist with 10 years experience",
+                    FilePath = "doctor1.jpg",
+                    FieldId = 1,
+                    HospitalId = 1
+                },
 
-               new Doctor
-               {
-                   Id = 2,
-                   Name = "Kamal",
-                   Surname = "Mammadov",
-                   Description = "Dentist specialist",
-                   FilePath = "doctor2.jpg",
-                   FieldId = 2,
-                   HospitalId = 2
-               }
+                new Doctor
+                {
+                    Id = 2,
+                    Name = "Kamal",
+                    Surname = "Mammadov",
+                    Description = "Dentist specialist",
+                    FilePath = "doctor2.jpg",
+                    FieldId = 2,
+                    HospitalId = 2
+                }
+
+            );
         }
     }
 }

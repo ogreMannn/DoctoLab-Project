@@ -135,3 +135,5 @@ C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\runtimes\win\lib\
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\mursa\source\repos\DoctoLab\DoctoLab\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

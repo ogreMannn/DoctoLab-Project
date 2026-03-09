@@ -1,4 +1,5 @@
-﻿using DoctoLab.Contexts;
+﻿using AutoMapper;
+using DoctoLab.Contexts;
 using DoctoLab.DTOs;
 using DoctoLab.GTOs;
 using DoctoLab.Models;
@@ -17,36 +18,25 @@ namespace DoctoLab.Controllers
     public class DoctorsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public DoctorsController(ApplicationDbContext context)
+        public DoctorsController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
-
 
         [HttpGet]
         
         public async Task<ActionResult<IEnumerable<DoctorGetDto>>> GetAll()
         {
             var doctors = await _context.Doctors
-                .Select(x => new DoctorGetDto
-                {
+               .Include(x => x.field)
+               .Include(x => x.hospital)
+               .ToListAsync();
 
-                    Id = x.Id,
-                    Name = x.Name,
-                    Surname = x.Surname,
-                    Age = x.Age,
-                    Description = x.Description,
-                    FilePath = x.FilePath,
-                    FieldId = x.FieldId,
-                    FieldName = x.field !=null ? x.field.Name : null,
-                    HospitalId = x.HospitalId,
-                    HospitalName = x.hospital !=null ? x.hospital.Name : null
-
-
-                }).ToListAsync();
-
-            return Ok(doctors);
+            var result = _mapper.Map<List<DoctorGetDto>>(doctors);
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
@@ -54,64 +44,32 @@ namespace DoctoLab.Controllers
         public async Task<ActionResult<DoctorGetDto>> GetById(int id)
         {
             var doctor = await _context.Doctors
-                .Where(x => x.Id == id)
-                .Select(x => new DoctorGetDto()
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    Surname = x.Surname,
-                    Age = x.Age,
-                    Description = x.Description,
-                    FilePath = x.FilePath,
-                    FieldId = x.FieldId,
-                    FieldName = x.field != null ? x.field.Name : null,
-                    HospitalId = x.HospitalId,
-                    HospitalName = x.hospital != null ? x.hospital.Name : null
+                .Include(x => x.field)
+                .Include(x => x.hospital)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-
-                })
-                .FirstOrDefaultAsync();
             if (doctor == null)
-            {
                 return NotFound();
-            }
-            return Ok(doctor);
+
+            var result = _mapper.Map<DoctorGetDto>(doctor);
+
+            return Ok(result);
         }
 
+        
+
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<DoctorCreateDto>> Create(DoctorCreateDto dto)
         {
-            var doctor = new Doctor
-            {
-                Name = dto.Name,
-                Surname = dto.Surname,
-                Age = dto.Age,
-                Description = dto.Description,
-                FilePath = dto.FilePath,
-                FieldId = dto.FieldId,
-                HospitalId = dto.HospitalId,
-            };
-
+            var doctor = _mapper.Map<Doctor>(dto);
 
             await _context.Doctors.AddAsync(doctor);
             await _context.SaveChangesAsync();
 
-            var result = new DoctorGetDto
-            {
-                Id = doctor.Id,
-                Name = doctor.Name,
-                Surname = doctor.Surname,
-                Age = doctor.Age,
-                Description = doctor.Description,
-                FilePath = doctor.FilePath,
-                FieldId = doctor.FieldId,
-                HospitalId = doctor.HospitalId,
+            var result = _mapper.Map<DoctorGetDto>(doctor);
 
-            };
-
-            return CreatedAtAction(nameof(GetById),
-                new { id = doctor.Id }, result);
+            return CreatedAtAction(nameof(GetById), new { id = doctor.Id }, result);
         }
 
         [HttpDelete("{id}")]
@@ -133,37 +91,18 @@ namespace DoctoLab.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<DoctorGetDto>> Update(int id , DoctorCreateDto updateDoctor)
+        public async Task<ActionResult<DoctorGetDto>> Update(int id , DoctorCreateDto dto)
         {
             var doctor = await _context.Doctors.FindAsync(id);
-            if (doctor == null)
-            {
-                return NotFound();
-            }
 
-            doctor.Name = updateDoctor.Name;
-            doctor.Surname = updateDoctor.Surname;
-            doctor.Age = updateDoctor.Age;
-            doctor.Description = updateDoctor.Description;
-            doctor.FilePath = updateDoctor.FilePath;
-            doctor.FieldId = updateDoctor.FieldId;
-            doctor.HospitalId = updateDoctor.HospitalId;
+            if (doctor == null)
+                return NotFound();
+
+            _mapper.Map(dto, doctor);
 
             await _context.SaveChangesAsync();
 
-            var result = new DoctorGetDto
-            {
-                Id = doctor.Id,
-                Name = doctor.Name,
-                Surname = doctor.Surname,
-                Age = doctor.Age,
-                Description = doctor.Description,
-                FilePath = doctor.FilePath,
-                FieldId = doctor.FieldId,
-                HospitalId = doctor.HospitalId
-            };
-
-            return Ok(result);
+            return Ok(_mapper.Map<DoctorGetDto>(doctor));
 
         }
 

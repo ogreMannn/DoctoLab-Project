@@ -257,7 +257,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updateDoctor",
+        "Name": "dto",
         "Type": "DoctoLab.DTOs.DoctorCreateDto",
         "IsRequired": true
       }
