@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoctoLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f14912dcea31bfe511feaf9cf1ca2aa3e414c09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f98fccf56cf9b562ed592255ee3aa8d12566f67e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoctoLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoctoLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

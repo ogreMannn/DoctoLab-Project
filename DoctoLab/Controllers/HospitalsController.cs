@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DoctoLab.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class HospitalsController : ControllerBase

@@ -1,6 +1,7 @@
 ﻿using DoctoLab.Contexts;
 using DoctoLab.DTOs;
 using DoctoLab.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
             var existingUser = await _userManager.FindByEmailAsync(dto.Email);
@@ -70,6 +72,7 @@ namespace DoctoLab.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginDto dto)
         {
             var user = await _userManager.FindByEmailAsync(dto.Email);

@@ -72,7 +72,8 @@ namespace DoctoLab.Migrations
 
                     b.Property<string>("Role")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");
@@ -170,6 +171,30 @@ namespace DoctoLab.Migrations
                     b.HasIndex("HospitalId");
 
                     b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Age = 0,
+                            Description = "Cardiologist with 10 years experience",
+                            FieldId = 1,
+                            FilePath = "doctor1.jpg",
+                            HospitalId = 1,
+                            Name = "Ali",
+                            Surname = "Aliyev"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Age = 0,
+                            Description = "Dentist specialist",
+                            FieldId = 2,
+                            FilePath = "doctor2.jpg",
+                            HospitalId = 2,
+                            Name = "Kamal",
+                            Surname = "Mammadov"
+                        });
                 });
 
             modelBuilder.Entity("DoctoLab.Models.Field", b =>
@@ -182,11 +207,29 @@ namespace DoctoLab.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Fields");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Cardiology"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Dentistry"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Neurology"
+                        });
                 });
 
             modelBuilder.Entity("DoctoLab.Models.Hospital", b =>
@@ -210,6 +253,20 @@ namespace DoctoLab.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Hospitals");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Samed Vurgun kucesi",
+                            Name = "Semashka"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Baku",
+                            Name = "Respublikansiy bolnica"
+                        });
                 });
 
             modelBuilder.Entity("DoctoLab.Models.Patient", b =>
